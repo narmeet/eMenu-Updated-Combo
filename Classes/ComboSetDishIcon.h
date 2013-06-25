@@ -29,6 +29,7 @@
 @property(nonatomic, assign, getter = isOptionalGroup) BOOL optionalgroup;
 
 @property(nonatomic, retain) NSString *dishPrice;
+@property(nonatomic, retain) NSString *pluId;
 @property(nonatomic, retain) NSString *dishTitle;
 @property(nonatomic, retain) NSString *dishHeader;
 @property(nonatomic, retain) NSString *dishType;

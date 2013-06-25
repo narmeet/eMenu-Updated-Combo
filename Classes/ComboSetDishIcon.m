@@ -5,7 +5,7 @@
 @implementation ComboSetDishIcon
 
 
-@synthesize dishTitle, dishHeader, dishType, dishImage, preSelected, isSelected, dishID, groupId, groupDishItem, maxSelection, groupName, selectionHeader, paidgroup, dishPrice;
+@synthesize dishTitle, dishHeader, dishType, dishImage, preSelected, isSelected, dishID, groupId, groupDishItem, maxSelection, groupName, selectionHeader, paidgroup, dishPrice, optionalgroup, pluId;
 
 
 -(id)initWithFrame:(CGRect)frame

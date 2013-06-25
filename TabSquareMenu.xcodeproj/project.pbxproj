@@ -12,6 +12,8 @@
 		0FF3AC8D15A572F900FB1300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3AC8C15A572F900FB1300 /* Foundation.framework */; };
 		0FF3AC8F15A572F900FB1300 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3AC8E15A572F900FB1300 /* CoreGraphics.framework */; };
 		0FF3ACB515A57A6F00FB1300 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3ACB415A57A6F00FB1300 /* QuartzCore.framework */; };
+		8604A9F21779B0920014E391 /* TabSquareComboSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8604A9EF1779B0920014E391 /* TabSquareComboSet.m */; };
+		8604A9F31779B0920014E391 /* ComboSetDishIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8604A9F11779B0920014E391 /* ComboSetDishIcon.m */; };
 		860842E516B80F010012DE1E /* menu_bg_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 860842E416B80F010012DE1E /* menu_bg_new.png */; };
 		862203CE1732453700FD8AD0 /* TabSquareDBFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 862203CD1732453700FD8AD0 /* TabSquareDBFile.m */; };
 		862203D21732641500FD8AD0 /* TabSquareBeerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862203D01732641500FD8AD0 /* TabSquareBeerController.m */; };
@@ -70,8 +72,6 @@
 		868BCBF516A062D200E4329B /* help_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 868BCBF416A062D200E4329B /* help_new.png */; };
 		86991CBB16BAA839007D5E67 /* folder_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 86991CBA16BAA839007D5E67 /* folder_arrow.png */; };
 		86991CBD16BAAB45007D5E67 /* sliderbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 86991CBC16BAAB45007D5E67 /* sliderbg.png */; };
-		86BB720F1778172900E4721E /* ComboSetDishIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BB720E1778172900E4721E /* ComboSetDishIcon.m */; };
-		86BB72121778173800E4721E /* TabSquareComboSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BB72111778173800E4721E /* TabSquareComboSet.m */; };
 		86BFA0651730D41B004D3BEE /* TabSquareHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BFA0641730D41B004D3BEE /* TabSquareHomeController.m */; };
 		86BFA06E1730D536004D3BEE /* english_flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BFA0681730D536004D3BEE /* english_flag.png */; };
 		86BFA06F1730D536004D3BEE /* china_flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BFA0691730D536004D3BEE /* china_flag.png */; };
@@ -773,6 +773,10 @@
 		0FF3AC8C15A572F900FB1300 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0FF3AC8E15A572F900FB1300 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0FF3ACB415A57A6F00FB1300 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8604A9EE1779B0920014E391 /* TabSquareComboSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabSquareComboSet.h; sourceTree = "<group>"; };
+		8604A9EF1779B0920014E391 /* TabSquareComboSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabSquareComboSet.m; sourceTree = "<group>"; };
+		8604A9F01779B0920014E391 /* ComboSetDishIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboSetDishIcon.h; sourceTree = "<group>"; };
+		8604A9F11779B0920014E391 /* ComboSetDishIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboSetDishIcon.m; sourceTree = "<group>"; };
 		860842E416B80F010012DE1E /* menu_bg_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_bg_new.png; sourceTree = "<group>"; };
 		862203CC1732453700FD8AD0 /* TabSquareDBFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabSquareDBFile.h; sourceTree = "<group>"; };
 		862203CD1732453700FD8AD0 /* TabSquareDBFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabSquareDBFile.m; sourceTree = "<group>"; };
@@ -848,10 +852,6 @@
 		868BCBF416A062D200E4329B /* help_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_new.png; sourceTree = "<group>"; };
 		86991CBA16BAA839007D5E67 /* folder_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder_arrow.png; sourceTree = "<group>"; };
 		86991CBC16BAAB45007D5E67 /* sliderbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderbg.png; sourceTree = "<group>"; };
-		86BB720D1778172900E4721E /* ComboSetDishIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboSetDishIcon.h; sourceTree = "<group>"; };
-		86BB720E1778172900E4721E /* ComboSetDishIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboSetDishIcon.m; sourceTree = "<group>"; };
-		86BB72101778173800E4721E /* TabSquareComboSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabSquareComboSet.h; sourceTree = "<group>"; };
-		86BB72111778173800E4721E /* TabSquareComboSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabSquareComboSet.m; sourceTree = "<group>"; };
 		86BFA0631730D41B004D3BEE /* TabSquareHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabSquareHomeController.h; sourceTree = "<group>"; };
 		86BFA0641730D41B004D3BEE /* TabSquareHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabSquareHomeController.m; sourceTree = "<group>"; };
 		86BFA0681730D536004D3BEE /* english_flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = english_flag.png; sourceTree = "<group>"; };
@@ -2639,10 +2639,10 @@
 				865077CC16B0FFFA00686705 /* CustomPageControl.m */,
 				86BFA09D1730E817004D3BEE /* TabSquareComboScroller.h */,
 				86BFA09E1730E817004D3BEE /* TabSquareComboScroller.m */,
-				86BB72101778173800E4721E /* TabSquareComboSet.h */,
-				86BB72111778173800E4721E /* TabSquareComboSet.m */,
-				86BB720D1778172900E4721E /* ComboSetDishIcon.h */,
-				86BB720E1778172900E4721E /* ComboSetDishIcon.m */,
+				8604A9EE1779B0920014E391 /* TabSquareComboSet.h */,
+				8604A9EF1779B0920014E391 /* TabSquareComboSet.m */,
+				8604A9F01779B0920014E391 /* ComboSetDishIcon.h */,
+				8604A9F11779B0920014E391 /* ComboSetDishIcon.m */,
 			);
 			name = ComboSet;
 			sourceTree = "<group>";
@@ -3969,8 +3969,8 @@
 				865A501F1749E81B002AD489 /* LanguageControler.m in Sources */,
 				866B7B68175762AA00B9B617 /* TabSquareRemoteActivation.m in Sources */,
 				8658E540176AE11E000056F4 /* TabSquareTableRequestHandler.m in Sources */,
-				86BB720F1778172900E4721E /* ComboSetDishIcon.m in Sources */,
-				86BB72121778173800E4721E /* TabSquareComboSet.m in Sources */,
+				8604A9F21779B0920014E391 /* TabSquareComboSet.m in Sources */,
+				8604A9F31779B0920014E391 /* ComboSetDishIcon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

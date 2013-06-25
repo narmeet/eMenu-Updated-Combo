@@ -110,6 +110,7 @@
     favouriteView.lastOrderedView=lastOrderedview;
     favouriteView.fbfriendView=fbFriendview;
     favouriteView.twitfollowerView=twitFriendview;
+    favouriteView.menuView = self;
 }
 -(void)loadQuickOrder{
     if (menuQuick == nil){

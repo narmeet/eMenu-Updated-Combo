@@ -159,6 +159,11 @@
 /*Cpmpleted the order selection*/
 -(void)doneAction
 {
+    /*
+     Note: Go to ComboSetDishIcon.h class,
+     there you will get a list of all values regarding selected dish from the group
+     */
+    
     NSString *orderData = @"";
     BOOL selection_status = TRUE;
     
@@ -319,7 +324,6 @@
 {
     NSMutableDictionary *dict = [group_dish objectAtIndex:group_index];
     NSMutableArray *all_dishes = nil;
-    
     NSString *pre_sel = dict[@"pre_select_option"];
     
     /* Forced item */
@@ -332,7 +336,6 @@
     else
     {
         all_dishes = [[TabSquareDBFile sharedDatabase] getGroupDishes:[dict[@"id"] intValue]];
-        
         BOOL _paid = FALSE;
         BOOL _optional = FALSE;
         
@@ -354,7 +357,7 @@
             img = [UIImage imageNamed:@"defaultImgB.png"];
         
         [dish_icon setDishImage:img];
-        
+        [dish_icon setPluId:local_dict[@"dish_id"]];
         [dish_icon setDishType:@"1"];
         [dish_icon setPreSelected:@"1"];
         [dish_icon setDishTitle:[dict[[LanguageControler activeLanguage:@"name"]] uppercaseString]];
@@ -396,7 +399,6 @@
     
     [dish_icon.layer setShadowOffset:CGSizeMake(4.0, 2.5)];
     [dish_icon.layer setShadowOpacity:1.0];
-    
     
     [dish_icon customizeIcon];
 
@@ -618,18 +620,15 @@
     img = [[TabSquareDBFile sharedDatabase] getImage2:image_name];
     
     if([image_name length] == 0 || img == nil){
-        
-        
         img = [UIImage imageNamed:@"dummy.png"];
-        
     }
-    
     
     
     [img_btn setBackgroundImage:img forState:UIControlStateNormal];
     
     [img_btn setTag:[dict[@"id"] intValue]];
     [img_btn setTitle:dict[@"name"] forState:UIControlStateDisabled];
+    [img_btn setTitle:dict[@"dish_id"] forState:UIControlStateReserved]; // Setting plu id
     [img_btn addTarget:self action:@selector(dishClicked:) forControlEvents:UIControlEventTouchUpInside];
     
     //[view addSubview:img_btn];
@@ -706,6 +705,8 @@
     
     ComboSetDishIcon *icon = (ComboSetDishIcon *)selected_btn;
     
+    NSString *plu_id = [NSString stringWithFormat:@"%@", [btn titleForState:UIControlStateReserved]];
+    [icon setPluId:plu_id];
     [icon setDishID:[NSString stringWithFormat:@"%d", [btn tag]]];
     [icon setDishImage:img];
     [icon setDishTitle:((UILabel *)[middle viewWithTag:NAME_TAG]).text];
@@ -715,7 +716,7 @@
     if(!selected  && ([icon isPaidGroup] || [icon isOptionalGroup]) ) {
         
         ComboSetDishIcon *dish_icon = [[ComboSetDishIcon alloc] initWithFrame:icon.frame];
-        [self performSelector:@selector(updateGroupsOnScroller:) withObject:dish_icon afterDelay:0.1];
+        [self performSelector:@selector(updateGroupsOnScroller:) withObject:dish_icon afterDelay:0.0];
     }
     
     [icon setDishType:@"1"];
@@ -778,6 +779,7 @@
             
             int group_index = (i*icon_per_row)+j;
             ComboSetDishIcon *dish_icon = (ComboSetDishIcon *)groups[group_index];
+            [dish_icon setGroupIndex:group_index];
             [dish_icon setFrame:CGRectMake(x, y, dish_icon.frame.size.width, dish_icon.frame.size.height)];
         }
     }

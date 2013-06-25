@@ -359,6 +359,14 @@
     }
 }
 
+
+-(void)checkFreeGroups
+{
+    /*===========Call webservice to get the free group for the logged in account============*/
+    
+}
+
+
 -(void)loadFBfriendList
 {
     fbfriendView.view.frame=CGRectMake(-10, 0, fbfriendView.view.frame.size.width, fbfriendView.view.frame.size.height);
